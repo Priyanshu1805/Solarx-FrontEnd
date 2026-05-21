@@ -49,6 +49,11 @@ function ContactPage() {
       
       if (response.ok) {
         setSubmitted(true);
+        // Redirect user directly to WhatsApp
+        const waNumber = "918459356501"; // Business WhatsApp Number
+        const waMessage = `Hi, I am interested in a free solar consultation.\n\nName: ${form.name}\nPhone: ${form.phone}\nCity: ${form.city}\nType: ${form.type}\nMessage: ${form.message}`;
+        const encodedMessage = encodeURIComponent(waMessage);
+        window.open(`https://wa.me/${waNumber}?text=${encodedMessage}`, "_blank");
       } else {
         const result = await response.json();
         alert(result.message || 'Error submitting form');
