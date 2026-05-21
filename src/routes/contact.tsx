@@ -41,7 +41,7 @@ function ContactPage() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/form/submit', {
+      const response = await fetch('https://solarx-backend.onrender.com/api/form/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
