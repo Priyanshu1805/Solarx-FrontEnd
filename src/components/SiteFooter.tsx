@@ -15,18 +15,34 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Nagpur's trusted solar energy partner. We design, install, and maintain
-            premium solar systems for homes, businesses, and farms across Maharashtra.
+            Nagpur's trusted solar energy partner. We design, install, and maintain premium solar
+            systems for homes, businesses, and farms across Maharashtra.
           </p>
         </div>
 
         <div>
           <h4 className="text-sm font-semibold text-foreground">Explore</h4>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/" className="hover:text-primary">Home</Link></li>
-            <li><Link to="/services" className="hover:text-primary">Services</Link></li>
-            <li><Link to="/about" className="hover:text-primary">About</Link></li>
-            <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
+            <li>
+              <Link to="/" className="hover:text-primary">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-primary">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-primary">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-primary">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -35,7 +51,9 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 text-primary" />
-              <a href="tel:+918459356501" className="hover:text-primary">+91 84593 56501</a>
+              <a href="tel:+918459356501" className="hover:text-primary">
+                +91 84593 56501
+              </a>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 text-primary" />

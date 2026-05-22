@@ -10,7 +10,11 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Solar Services — Residential, Commercial & Agricultural | SOLAREX ENERGY" },
-      { name: "description", content: "Premium solar solutions for every need: residential rooftops, commercial buildings, agricultural pumps, industrial plants, and AMC services in Nagpur." },
+      {
+        name: "description",
+        content:
+          "Premium solar solutions for every need: residential rooftops, commercial buildings, agricultural pumps, industrial plants, and AMC services in Nagpur.",
+      },
     ],
   }),
   component: ServicesPage,
@@ -31,7 +35,12 @@ const services = [
     title: "Commercial Solar",
     tagline: "Cut operating costs, scale your savings.",
     desc: "Rooftop and ground-mount systems for offices, retail, hotels, hospitals and educational institutions.",
-    points: ["10–500 kW capacity", "OPEX & CAPEX models", "GST input benefit", "Accelerated depreciation"],
+    points: [
+      "10–500 kW capacity",
+      "OPEX & CAPEX models",
+      "GST input benefit",
+      "Accelerated depreciation",
+    ],
   },
   {
     icon: Sprout,
@@ -55,7 +64,12 @@ const services = [
     title: "Solar Maintenance & AMC",
     tagline: "Keep every panel performing.",
     desc: "Comprehensive Annual Maintenance Contracts: cleaning, inspection, inverter health checks and performance reports.",
-    points: ["Quarterly cleaning", "Inverter diagnostics", "Performance reports", "Priority support"],
+    points: [
+      "Quarterly cleaning",
+      "Inverter diagnostics",
+      "Performance reports",
+      "Priority support",
+    ],
   },
 ];
 
@@ -67,8 +81,16 @@ const projectGallery = [
 ];
 
 const testimonials = [
-  { name: "Vikram Bhandari", role: "Hotelier, Wardha Road", quote: "Our 30kW commercial system runs the kitchen, AC and lighting. Bills are 80% lower." },
-  { name: "Sushma Tayde", role: "School Trustee, Hingna", quote: "Beautifully installed, students love it, and savings fund three new classrooms." },
+  {
+    name: "Vikram Bhandari",
+    role: "Hotelier, Wardha Road",
+    quote: "Our 30kW commercial system runs the kitchen, AC and lighting. Bills are 80% lower.",
+  },
+  {
+    name: "Sushma Tayde",
+    role: "School Trustee, Hingna",
+    quote: "Beautifully installed, students love it, and savings fund three new classrooms.",
+  },
 ];
 
 function ServicesPage() {
@@ -78,13 +100,15 @@ function ServicesPage() {
       <section className="relative overflow-hidden bg-gradient-hero py-20 text-primary-foreground md:py-28">
         <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6">
-          <span className="text-xs font-semibold uppercase tracking-widest opacity-90">Our Services</span>
+          <span className="text-xs font-semibold uppercase tracking-widest opacity-90">
+            Our Services
+          </span>
           <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance md:text-6xl">
             Premium Solar Solutions for Every Need
           </h1>
           <p className="mt-5 max-w-xl text-base opacity-90">
-            Whether it's your home, business or farm — SOLAREX ENERGY delivers solar
-            systems engineered to last 25+ years.
+            Whether it's your home, business or farm — SOLAREX ENERGY delivers solar systems
+            engineered to last 25+ years.
           </p>
         </div>
       </section>
@@ -98,13 +122,22 @@ function ServicesPage() {
               className={`grid items-center gap-10 md:grid-cols-2 ${i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""}`}
             >
               <div>
-                <img src={s.img} alt={s.title} loading="lazy" width={1536} height={1024} className="rounded-3xl shadow-soft" />
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  loading="lazy"
+                  width={1536}
+                  height={1024}
+                  className="rounded-3xl shadow-soft"
+                />
               </div>
               <div>
                 <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary">
                   <s.icon className="h-6 w-6" />
                 </div>
-                <h2 className="mt-5 font-display text-3xl font-bold tracking-tight md:text-4xl">{s.title}</h2>
+                <h2 className="mt-5 font-display text-3xl font-bold tracking-tight md:text-4xl">
+                  {s.title}
+                </h2>
                 <p className="mt-2 text-base font-medium text-primary">{s.tagline}</p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">{s.desc}</p>
                 <ul className="mt-6 grid grid-cols-2 gap-3">
@@ -131,16 +164,28 @@ function ServicesPage() {
       <section className="bg-secondary/50 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">Project Gallery</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+              Project Gallery
+            </span>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-5xl">
               Recent installations across Nagpur
             </h2>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {projectGallery.map((p) => (
-              <figure key={p.label} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-soft">
+              <figure
+                key={p.label}
+                className="group overflow-hidden rounded-2xl border border-border bg-card shadow-soft"
+              >
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={p.img} alt={p.label} loading="lazy" width={1536} height={1024} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img
+                    src={p.img}
+                    alt={p.label}
+                    loading="lazy"
+                    width={1536}
+                    height={1024}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
                 <figcaption className="p-4">
                   <div className="text-xs font-semibold text-primary">{p.kW}</div>
@@ -159,9 +204,14 @@ function ServicesPage() {
         </h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {testimonials.map((t) => (
-            <figure key={t.name} className="rounded-2xl border border-border bg-card p-7 shadow-soft">
+            <figure
+              key={t.name}
+              className="rounded-2xl border border-border bg-card p-7 shadow-soft"
+            >
               <div className="flex gap-0.5 text-accent">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
               </div>
               <blockquote className="mt-4 text-base leading-relaxed">"{t.quote}"</blockquote>
               <figcaption className="mt-5 border-t border-border pt-4">

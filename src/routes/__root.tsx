@@ -41,7 +41,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <h1 className="text-xl font-semibold">This page didn't load</h1>
         <p className="mt-2 text-sm text-muted-foreground">Something went wrong.</p>
         <button
-          onClick={() => { router.invalidate(); reset(); }}
+          onClick={() => {
+            router.invalidate();
+            reset();
+          }}
           className="mt-6 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
         >
           Try again
@@ -57,10 +60,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "SOLAREX ENERGY — Premium Solar Solutions in Nagpur" },
-      { name: "description", content: "Nagpur's trusted solar energy partner. Residential, commercial, agricultural & industrial solar installation and AMC services." },
+      {
+        name: "description",
+        content:
+          "Nagpur's trusted solar energy partner. Residential, commercial, agricultural & industrial solar installation and AMC services.",
+      },
       { name: "author", content: "SOLAREX ENERGY" },
       { property: "og:title", content: "SOLAREX ENERGY — Power Your Future Naturally" },
-      { property: "og:description", content: "Premium solar installations across Nagpur and Maharashtra. Get a free consultation today." },
+      {
+        property: "og:description",
+        content:
+          "Premium solar installations across Nagpur and Maharashtra. Get a free consultation today.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -68,7 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -80,7 +94,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head><HeadContent /></head>
+      <head>
+        <HeadContent />
+      </head>
       <body>
         {children}
         <Scripts />

@@ -9,7 +9,13 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { Calculator, Zap, IndianRupee, BatteryCharging } from "lucide-react";
 
-export function SolarCalculator({ triggerText = "Calculate Your Savings", className = "" }: { triggerText?: string, className?: string }) {
+export function SolarCalculator({
+  triggerText = "Calculate Your Savings",
+  className = "",
+}: {
+  triggerText?: string;
+  className?: string;
+}) {
   const [monthlyBill, setMonthlyBill] = useState(3000);
 
   // Constants for calculation
@@ -47,7 +53,7 @@ export function SolarCalculator({ triggerText = "Calculate Your Savings", classN
                 Average Monthly Bill
               </label>
               <div className="font-display text-2xl font-bold text-primary">
-                ₹{monthlyBill.toLocaleString('en-IN')}
+                ₹{monthlyBill.toLocaleString("en-IN")}
               </div>
             </div>
             <Slider
@@ -65,18 +71,28 @@ export function SolarCalculator({ triggerText = "Calculate Your Savings", classN
             <div className="rounded-2xl border border-border bg-background p-4">
               <div className="flex items-center gap-2 text-primary mb-2">
                 <Zap className="h-4 w-4" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">System Size</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  System Size
+                </span>
               </div>
-              <div className="font-display text-xl font-bold text-foreground">{recommendedKw} kW</div>
-              <p className="text-xs text-muted-foreground mt-1">Generates ~{Math.round(recommendedKw * UNITS_PER_KW_PER_MONTH)} units/mo</p>
+              <div className="font-display text-xl font-bold text-foreground">
+                {recommendedKw} kW
+              </div>
+              <p className="text-xs text-muted-foreground mt-1">
+                Generates ~{Math.round(recommendedKw * UNITS_PER_KW_PER_MONTH)} units/mo
+              </p>
             </div>
 
             <div className="rounded-2xl border border-border bg-background p-4">
               <div className="flex items-center gap-2 text-primary mb-2">
                 <IndianRupee className="h-4 w-4" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Cost Estimate</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Cost Estimate
+                </span>
               </div>
-              <div className="font-display text-xl font-bold text-foreground">₹{totalCost.toLocaleString('en-IN')}</div>
+              <div className="font-display text-xl font-bold text-foreground">
+                ₹{totalCost.toLocaleString("en-IN")}
+              </div>
               <p className="text-xs text-muted-foreground mt-1">Before Gov. Subsidies</p>
             </div>
 
@@ -84,19 +100,24 @@ export function SolarCalculator({ triggerText = "Calculate Your Savings", classN
               <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-primary/10 blur-xl"></div>
               <div className="flex items-center gap-2 text-primary mb-2 relative z-10">
                 <BatteryCharging className="h-4 w-4" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-primary">0% EMI Option (12 Months)</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-primary">
+                  0% EMI Option (12 Months)
+                </span>
               </div>
               <div className="font-display text-2xl font-bold text-foreground relative z-10">
-                ₹{zeroPercentEmi12Months.toLocaleString('en-IN')} <span className="text-sm font-normal text-muted-foreground">/ month</span>
+                ₹{zeroPercentEmi12Months.toLocaleString("en-IN")}{" "}
+                <span className="text-sm font-normal text-muted-foreground">/ month</span>
               </div>
             </div>
-            
+
             <div className="col-span-2 rounded-2xl bg-gradient-hero p-5 text-primary-foreground text-center">
               <div className="text-sm font-medium opacity-90 mb-1">Estimated 25-Year Savings</div>
-              <div className="font-display text-3xl font-bold">₹{lifetimeSavings.toLocaleString('en-IN')}</div>
+              <div className="font-display text-3xl font-bold">
+                ₹{lifetimeSavings.toLocaleString("en-IN")}
+              </div>
             </div>
           </div>
-          
+
           <p className="text-center text-xs text-muted-foreground">
             *This is a preliminary estimate. Subsidies can reduce costs by up to 40%.
           </p>
