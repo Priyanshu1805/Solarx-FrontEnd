@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Calculator, Phone, Sun, Zap, Leaf, Shield, TrendingDown, Star, CheckCircle2 } from "lucide-react";
+import { SolarCalculator } from "@/components/SolarCalculator";
 import heroImg from "@/assets/solar-hero.jpg";
 import homeImg from "@/assets/solar-home.jpg";
 import cellsImg from "@/assets/solar-cells.jpg";
@@ -67,13 +68,18 @@ function HomePage() {
               >
                 Get Free Consultation <ArrowRight className="h-4 w-4" />
               </Link>
-              <a
-                href="#savings"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-semibold text-foreground hover:border-primary"
-              >
-                <Calculator className="h-4 w-4" /> Calculate Your Savings
-              </a>
+              <SolarCalculator className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-semibold text-foreground hover:border-primary" />
             </div>
+            <div className="mt-6 flex items-center gap-2 text-sm text-foreground">
+              <div className="flex gap-1 text-yellow-500">
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current text-yellow-500/50" />
+              </div>
+              <span className="font-semibold">Rated 4.8 on Google</span>
+              <span className="text-muted-foreground">| 500+ ratings</span>
             <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-4">
               {stats.map((s) => (
                 <div key={s.label}>
@@ -197,9 +203,10 @@ function HomePage() {
             </h2>
             <ul className="mt-8 space-y-4">
               {[
+                "0% EMI Plans available for easy financing",
+                "Cyclone-proof installation using premium mounts",
+                "Guaranteed Savings with our precise energy mapping",
                 "MNRE-approved tier-1 panels & inverters",
-                "In-house certified installation crews",
-                "Transparent quotes — no hidden charges",
                 "End-to-end paperwork & net-metering handled",
                 "Dedicated AMC team for 25 years of uptime",
               ].map((item) => (
