@@ -52,7 +52,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60">
         <p className="mx-auto max-w-7xl px-6 py-5 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} SOLAREX ENERGY. All rights reserved.
+          © {new Date().getFullYear()} SOLAREX ENERGY. Built by Priyanshu Talavekar.
         </p>
       </div>
     </footer>
