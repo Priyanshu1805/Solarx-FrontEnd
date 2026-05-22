@@ -80,6 +80,7 @@ function HomePage() {
               </div>
               <span className="font-semibold">Rated 4.8 on Google</span>
               <span className="text-muted-foreground">| 500+ ratings</span>
+            </div>
             <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-4">
               {stats.map((s) => (
                 <div key={s.label}>
